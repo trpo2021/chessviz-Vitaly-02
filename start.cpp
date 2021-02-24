@@ -1,8 +1,12 @@
 #include <stdlib.h>
 
-int main() 
+int main()
 {
-	system("xdg-open /home/Vitaly/chessviz-Vitaly-02/chessviz.html &");
-	return 0;
+    system("xdg-open chessviz.html &");
+    return 0;
 }
+
+
+
+
 
