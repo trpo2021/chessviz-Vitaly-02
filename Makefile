@@ -1,9 +1,9 @@
 CC=g++
 CFLAGS=-c -Wall -Werror
 LDFLAGS=
-SOURCES=start.cpp 
+SOURCES=main.cpp 
 OBJECTS=$(SOURCES:.cpp=.o)
-EXECUTABLE=start
+EXECUTABLE=main
 
 all: $(SOURCES) $(EXECUTABLE)
 
