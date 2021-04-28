@@ -1,22 +1,6 @@
 #include <iostream>
-
+#include <libchessviz/show_board.h>
 using namespace std;
-
-void show_board(char** board)
-{
-    const int S = 8;
-    cout << "\t   a b c d e f g h\n";
-    for (int i = 0; i < S; i++)
-    {
-        cout << "\n\t" << S - i << "  ";
-        for (int j = 0; j < S; j++)
-        {
-            cout << board[i][j] << " ";
-        }
-    }
-    cout << "\n\n##################################\n\n";
-    return;
-}
 
 char** new_board()
 {
