@@ -1,23 +1,3 @@
-#include <iostream>
-
-using namespace std;
-
-void show_board(char** board)
-{
-    const int S = 8;
-    cout << "\t   a b c d e f g h\n";
-    for (int i = 0; i < S; i++)
-    {
-        cout << "\n\t" << S - i << "  ";
-        for (int j = 0; j < S; j++)
-        {
-            cout << board[i][j] << " ";
-        }
-    }
-    cout << "\n\n##################################\n\n";
-    return;
-}
-
 char** new_board()
 {
     const int S = 8;
@@ -54,11 +34,4 @@ char** new_board()
     board[7][3] = 'Q';
     board[7][4] = 'K';
     return board;
-}
-
-int main() 
-{
-    char** board = new_board();
-    show_board(board);
-    return 0;
 }

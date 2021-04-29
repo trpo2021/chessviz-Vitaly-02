@@ -1,2 +1,7 @@
 /main
 *.o
+*.cpp.o
+*.out
+*.exe
+*.d
+*.a
