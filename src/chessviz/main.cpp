@@ -1,10 +1,10 @@
 #include <iostream>
-#include <libchessviz/show_board.h>
-#include <libchessviz/new_board.h>
+#include "libchessviz/game_loop.h"
+
+using namespace std;
 
 int main() 
 {
-    char** board = new_board();
-    show_board(board);
+    game_loop();
     return 0;
 }
