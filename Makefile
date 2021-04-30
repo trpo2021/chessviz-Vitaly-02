@@ -108,7 +108,7 @@ $(TEST_OBJ)show_board.o: $(LIBCHESSVIZ_SRC)show_board.cpp
 clean-test:
 	rm $(TEST_OBJ)*.o
 	rm $(TEST_OBJ)*.a
-	rm $(CHESSVIZ_BIN)*.exe
+	rm $(CHESSVIZ_BIN)test
 		
 			
 .PHONY: clean
