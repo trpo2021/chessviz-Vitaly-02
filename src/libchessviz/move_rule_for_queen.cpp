@@ -1,6 +1,6 @@
 #include "move_rule_for_queen.h"
 
-bool move_rule_for_quenn(
+bool move_rule_for_queen(
         char** board,
         int y_start,
         int x_start,
