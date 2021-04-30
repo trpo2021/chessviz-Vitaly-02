@@ -4,7 +4,7 @@ APP_NAME = chessviz
 LIB_NAME = libchessviz
 
 CFLAGS = -Wall -Wextra -Werror
-CPPFLAGS = -I src -I thirdparty -MP -MMD
+CPPFLAGS = -I src -I thirdparty 
 LDFLAGS =
 LDLIBS =
 
@@ -116,3 +116,5 @@ clean:
 	$(RM) $(APP_PATH) $(LIB_PATH)
 	find $(OBJ_DIR) -name '*.o' -exec $(RM) '{}' \;
 	find $(OBJ_DIR) -name '*.d' -exec $(RM) '{}' \;
+	
+-include ctest.d
