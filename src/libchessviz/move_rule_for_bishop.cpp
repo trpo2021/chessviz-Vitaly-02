@@ -1,8 +1,4 @@
-#include <iostream>
-
 #include "move_rule_for_bishop.h"
-
-using namespace std;
 
 bool move_rule_for_bishop(
         char** board,
@@ -11,7 +7,6 @@ bool move_rule_for_bishop(
         int y_end,
         int x_end)
 {
-
     // (y - a, x - a)
     if (y_start > y_end && x_start > x_end) {
         if (y_start - y_end == x_start - x_end) {
@@ -20,7 +15,6 @@ bool move_rule_for_bishop(
                  i > y_end;
                  --i, --j) {
                 if (board[i][j] != '_') {
-                    cout << "i = " << i << "\nj = " << j << "\n";
                     return false;
                 }
             }
