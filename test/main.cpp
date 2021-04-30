@@ -14,6 +14,7 @@
 #include "libchessviz/show_board.h"
 #include "libchessviz/move_rule_for_black_pawn.h"
 #include "libchessviz/move_rule_for_white_pawn.h"
+#include "libchessviz/move_rule_for_bishop.h"
 #include "ctest.h"
 
 using namespace std;
@@ -820,6 +821,137 @@ CTEST(move_rule_for_white_pawn, test4)
             x_move);
     ASSERT_FALSE(flag);
 }
+
+// move_rule_for_bishop
+
+CTEST(move_rule_for_bishop, test1)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if (i == y_figure && j == x_figure) {
+                board[i][j] = 'b';
+            } else
+                board[i][j] = '_';
+        }
+    }
+    const int x_move = 4;
+    const int y_move = 4;
+
+    bool flag = move_rule_for_bishop(
+            board,
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_bishop, test2)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if (i == y_figure && j == x_figure) {
+                board[i][j] = 'b';
+            } else
+                board[i][j] = '_';
+        }
+    }
+    const int x_move = 2;
+    const int y_move = 4;
+
+    bool flag = move_rule_for_bishop(
+            board,
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_bishop, test3)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if (i == y_figure && j == x_figure) {
+                board[i][j] = 'b';
+            } else
+                board[i][j] = '_';
+        }
+    }
+    const int x_move = 2;
+    const int y_move = 2;
+
+    bool flag = move_rule_for_bishop(
+            board,
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_bishop, test4)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if (i == y_figure && j == x_figure) {
+                board[i][j] = 'b';
+            } else
+                board[i][j] = '_';
+        }
+    }
+    const int x_move = 4;
+    const int y_move = 2;
+
+    bool flag = move_rule_for_bishop(
+            board,
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+
+
+
+
 
 CTEST_SKIP(ctest, test_skip)
 {
