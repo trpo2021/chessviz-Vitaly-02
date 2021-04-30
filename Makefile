@@ -68,7 +68,7 @@ $(CHESSVIZ_BIN)test: $(TEST_OBJ)main.o $(TEST_OBJ)testlibchessviz.a
 $(TEST_OBJ)main.o: $(TEST)main.cpp
 	$(CXX) -c $(CPPFLAGS) -o $@ $<
 
-$(TEST_OBJ)testlibchessviz.a: $(TEST_OBJ)is_black_or_white.o $(TEST_OBJ)get_coordinate.o $(TEST_OBJ)move_rule_for_black_pawn.o $(TEST_OBJ)move_rule_for_white_pawn.o $(TEST_OBJ)move.o $(TEST_OBJ)game_loop.o $(TEST_OBJ)new_board.o $(TEST_OBJ)check_input.o $(TEST_OBJ)is_turn_right.o $(TEST_OBJ)console_input.o $(TEST_OBJ)show_board.o $(TEST_OBJ)move_rule_for_bishop.o $(TEST_OBJ)move_rule_for_king.o
+$(TEST_OBJ)testlibchessviz.a: $(TEST_OBJ)is_black_or_white.o $(TEST_OBJ)get_coordinate.o $(TEST_OBJ)move_rule_for_black_pawn.o $(TEST_OBJ)move_rule_for_white_pawn.o $(TEST_OBJ)move.o $(TEST_OBJ)game_loop.o $(TEST_OBJ)new_board.o $(TEST_OBJ)check_input.o $(TEST_OBJ)is_turn_right.o $(TEST_OBJ)console_input.o $(TEST_OBJ)show_board.o $(TEST_OBJ)move_rule_for_bishop.o $(TEST_OBJ)move_rule_for_king.o $(TEST_OBJ)move_rule_for_knight.o
 	ar rcs $@ $^
 
 $(TEST_OBJ)check_input.o: $(LIBCHESSVIZ_SRC)check_input.cpp
@@ -108,6 +108,9 @@ $(TEST_OBJ)move_rule_for_bishop.o: $(LIBCHESSVIZ_SRC)move_rule_for_bishop.cpp
 	$(CXX) -c $(CPPFLAGS) -o $@ $<
 	
 $(TEST_OBJ)move_rule_for_king.o: $(LIBCHESSVIZ_SRC)move_rule_for_king.cpp
+	$(CXX) -c $(CPPFLAGS) -o $@ $<
+	
+$(TEST_OBJ)move_rule_for_knight.o: $(LIBCHESSVIZ_SRC)move_rule_for_knight.cpp
 	$(CXX) -c $(CPPFLAGS) -o $@ $<
 
 .PHONY: clean-test

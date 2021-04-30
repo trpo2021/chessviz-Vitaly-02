@@ -16,6 +16,7 @@
 #include "libchessviz/move_rule_for_white_pawn.h"
 #include "libchessviz/move_rule_for_bishop.h"
 #include "libchessviz/move_rule_for_king.h"
+#include "libchessviz/move_rule_for_knight.h"
 #include "ctest.h"
 
 using namespace std;
@@ -1253,7 +1254,277 @@ CTEST(move_rule_for_king, test10)
     ASSERT_TRUE(flag);
 }
 
+// knight 
 
+CTEST(move_rule_for_knight, test2)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 5;
+    const int y_move = 2;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'n';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_knight(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_knight, test3)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 4;
+    const int y_move = 5;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'n';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_knight(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_knight, test4)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 5;
+    const int y_move = 4;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'n';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_knight(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_knight, test5)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 1;
+    const int y_move = 2;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'n';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_knight(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_knight, test6)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 2;
+    const int y_move = 1;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'n';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_knight(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_knight, test7)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 4;
+    const int y_move = 1;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'n';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_knight(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_knight, test8)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 5;
+    const int y_move = 2;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'n';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_knight(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_knight, test9)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 59;
+    const int y_move = 29;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'n';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_knight(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_FALSE(flag);
+}
+
+CTEST(move_rule_for_knight, test10)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 3;
+    const int y_move = 3;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'n';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_knight(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_FALSE(flag);
+}
 
 
 
