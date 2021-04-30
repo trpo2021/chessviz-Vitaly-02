@@ -15,6 +15,7 @@
 #include "libchessviz/move_rule_for_black_pawn.h"
 #include "libchessviz/move_rule_for_white_pawn.h"
 #include "libchessviz/move_rule_for_bishop.h"
+#include "libchessviz/move_rule_for_king.h"
 #include "ctest.h"
 
 using namespace std;
@@ -948,6 +949,309 @@ CTEST(move_rule_for_bishop, test4)
     ASSERT_TRUE(flag);
 }
 
+// king
+
+CTEST(move_rule_for_king, test1)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 2;
+    const int y_move = 2;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'k';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_king(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_king, test2)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 3;
+    const int y_move = 2;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'k';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_king(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_king, test3)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 2;
+    const int y_move = 3;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'k';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_king(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_king, test4)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 4;
+    const int y_move = 4;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'k';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_king(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_king, test5)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 4;
+    const int y_move = 3;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'k';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_king(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_king, test6)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 3;
+    const int y_move = 4;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'k';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_king(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_king, test7)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 99;
+    const int y_move = 99;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)
+                || (i == y_move && j == x_move)) {
+                board[i][j] = 'k';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_king(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_FALSE(flag);
+}
+
+CTEST(move_rule_for_king, test8)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 3;
+    const int y_move = 3;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)
+                || (i == y_move && j == x_move)) {
+                board[i][j] = 'k';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_king(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_FALSE(flag);
+}
+
+CTEST(move_rule_for_king, test9)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 4;
+    const int y_move = 2;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'k';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_king(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
+
+CTEST(move_rule_for_king, test10)
+{
+    // Given
+    const int x_figure = 3;
+    const int y_figure = 3;
+    const int size = 8;
+    char** board;
+    board = new char*[size];
+    for (int i = 0; i < size; ++i) {
+        board[i] = new char[size];
+    }
+    const int x_move = 2;
+    const int y_move = 4;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if ((i == y_figure && j == x_figure)) {
+                board[i][j] = 'k';
+            } else
+                board[i][j] = '_';
+        }
+    }
+
+    bool flag = move_rule_for_king(
+            y_figure,
+            x_figure,
+            y_move,
+            x_move);
+    ASSERT_TRUE(flag);
+}
 
 
 
