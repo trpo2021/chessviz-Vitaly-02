@@ -90,7 +90,7 @@ bool move_rule(
         }
         // queen
         if (figure == 'q' || figure == 'Q') {
-            bool move_rule = move_rule_for_quenn(
+            bool move_rule = move_rule_for_queen(
                     board,
                     y_start,
                     x_start,
