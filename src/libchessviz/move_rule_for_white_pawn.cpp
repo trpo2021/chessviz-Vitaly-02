@@ -32,26 +32,22 @@ bool move_rule_for_white_pawn(
         }
     }
     //other moves
-    if ((y_end < S && y_end > y_start
-         && x_start == x_end)
-        || (y_end < S && y_end > y_start
-            && ((x_start + 1 == x_end)
-                || (x_start - 1 == x_end)))) {
-        if (y_end == y_start + 1
+    if (y_end >= 0 && y_end < y_start) {
+        if (y_end == y_start - 1
             && x_start == x_end) {
             return true;
         }
-        if (y_end == y_start + 1
+        if (y_end == y_start - 1
             && x_start + 1 == x_end
             && board[y_end][x_end] != '_'
-            && is_black_or_white(board[y_end][x_end]) != false
+            && is_black_or_white(board[y_end][x_end]) == false
             && x_start + 1 < S) {
             return true;
         }
-        if (y_end == y_start + 1
+        if (y_end == y_start - 1
             && x_start - 1 == x_end
             && board[y_end][x_end] != '_'
-            && is_black_or_white(board[y_end][x_end]) != false
+            && is_black_or_white(board[y_end][x_end]) == false
             && x_start - 1 >= 0) {
             return true;
         }

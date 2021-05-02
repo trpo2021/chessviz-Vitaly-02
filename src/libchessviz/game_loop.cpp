@@ -38,7 +38,7 @@ void game_loop()
         }
         cin >> enter;
         console_input(enter, x_start, y_start, x_end, y_end);
-            if (is_turn_right(board, x_start, y_start, black_or_white)
+            if (is_turn_right(board, x_start, y_start, x_end, y_end, black_or_white)
                 == true && board[y_start][x_start] != '_' ) {
                 move(board,
                      x_start,

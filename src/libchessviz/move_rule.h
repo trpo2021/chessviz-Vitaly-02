@@ -5,5 +5,5 @@ bool move_rule(
         int y_start,
         int x_end,
         int y_end,
-        char element,
+        char figure,
         char** board);
