@@ -1,0 +1,7 @@
+/bin/chessviz
+/bin/test
+*.o
+*.cpp.o
+*.out
+*.d
+*.a
