@@ -1,4 +1,4 @@
-CC = g++
+CXX = g++
 
 APP_NAME = chessviz
 LIB_NAME = libchessviz
@@ -131,4 +131,4 @@ clean:
 	find $(OBJ_DIR) -name '*.o' -exec $(RM) '{}' \;
 	find $(OBJ_DIR) -name '*.d' -exec $(RM) '{}' \;
 	
--include ctest.d
+
